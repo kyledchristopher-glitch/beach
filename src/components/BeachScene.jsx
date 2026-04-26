@@ -58,7 +58,7 @@ export default function BeachScene() {
     const ctx = gsap.context(() => {
       gsap.set(nightRef.current, { opacity: 0 })
       gsap.set(starsWrapRef.current, { opacity: 0 })
-      gsap.set(bonfireRef.current, { opacity: 0, scale: 0.84, y: 16, transformOrigin: '50% 100%' })
+      gsap.set(bonfireRef.current, { opacity: 0, scale: 0.68, y: 16, transformOrigin: '50% 100%' })
       gsap.set(copyRef.current, { opacity: 0, y: 34 })
       gsap.set(sceneRef.current, { '--vignette-opacity': 0.28, '--night-wash-opacity': 0 })
 
@@ -86,7 +86,7 @@ export default function BeachScene() {
 
       timeline
         // The sun only drops to the horizon, then fades before it can visibly cross the waterline.
-        .to(sunRef.current, { y: '8.5vh', opacity: 0, scale: 0.58, ease: 'power2.in' }, 0)
+        .to(sunRef.current, { y: '4.6vh', opacity: 0, scale: 0.58, ease: 'power2.in' }, 0)
         .to(dayRef.current, { opacity: 0.1 }, 0.3)
         .to(nightRef.current, { opacity: 1 }, 0.3)
         .to(sceneRef.current, { '--vignette-opacity': 0.78, '--night-wash-opacity': 0.24 }, 0.42)

@@ -42,15 +42,13 @@
 
 .sun {
   position: absolute;
-  top: var(--sun-top, 44.5%);
-  left: var(--sun-left, 74%);
-  width: clamp(42px, 3.8vw, 72px);
-  height: auto;
-  z-index: 4;
+  top: 44.7%;
+  left: 74%;
+  width: clamp(40px, 3.3vw, 58px);
+  z-index: 5;
   transform: translate(-50%, -50%);
-  filter: blur(0.15px) drop-shadow(0 0 18px rgba(255, 233, 171, 0.72)) drop-shadow(0 0 44px rgba(236, 140, 47, 0.34));
-  pointer-events: none;
-  user-select: none;
+  filter: blur(0.15px) drop-shadow(0 0 18px rgba(255, 210, 100, 0.72));
+  opacity: 0.95;
   will-change: transform, opacity;
 }
 
@@ -253,10 +251,16 @@
   }
 
   .sun {
-    top: var(--sun-top-mobile, 45%);
-    left: var(--sun-left-mobile, 73%);
-    width: clamp(38px, 10vw, 64px);
-  }
+  position: absolute;
+  top: 43.6%;
+  left: 74%;
+  width: clamp(40px, 3.3vw, 58px);
+  z-index: 5;
+  transform: translate(-50%, -50%);
+  filter: blur(0.15px) drop-shadow(0 0 18px rgba(255, 210, 100, 0.72));
+  opacity: 0.95;
+  will-change: transform, opacity;
+}
 
   .starsWrap {
     height: 43vh;
@@ -272,4 +276,19 @@
     bottom: clamp(8px, 2vh, 22px);
     width: clamp(74px, 20vw, 118px);
   }
+}
+
+
+.horizonMask {
+  display: none;
+}
+
+
+.sunClip {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: hidden;
+  clip-path: inset(0 0 53.6% 0);
 }
